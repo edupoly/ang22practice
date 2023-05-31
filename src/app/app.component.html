@@ -1,1 +1,14 @@
-<h1>main Branch</h1>
+<h1>Property Binding</h1>
+
+<img src="imgUrl" alt="sdf">
+<img src={{imgUrl}} alt="sdf">
+<img [src]="imgUrl" alt="sdf">
+
+<table border="2" class="table table-stripped table-bordered w-50" align="center">
+    <tr *ngFor="let player of cricketers" [class]="player.gender==='male'?'bg-info':'bg-danger'">
+        <td><img [src]="player.gender==='male'?'https://www.freeiconspng.com/thumbs/male-icon/male-icon-15.png':'https://cutewallpaper.org/24/male-icon-png/user-male-icon-symbol-vector-free-vector-silhouette-vector-user-png-transparent-png-vhv.png'" width="100px"></td>
+        <td>{{player.fullname}}</td>
+        <td><img [src]="player.pic" width="100px" alt=""></td>
+        <td>{{player.age}}</td>
+    </tr>
+</table>
