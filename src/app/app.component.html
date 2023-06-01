@@ -1,1 +1,8 @@
-<h1>Base Branch</h1>
+<div class="border border-2 border-danger p-2 m-2">
+    <h1>App Component</h1>
+    <h1>My Age:{{myage}}</h1>
+    <h1>Child data:{{childData}}</h1>
+    <app-child [appage]="myage" (abc)="handler1($event)"></app-child>
+    <app-gallery [myimages]="sportspics"></app-gallery>
+    <app-gallery [myimages]="beaches"></app-gallery>
+</div>
